@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gabriele\\Desktop\\Repo\\GestioneCondomini\\GestioneCondomini\\GestioneCondomini.csproj": {}
+    "C:\\Users\\Gabriele\\Desktop\\Repo\\GestioneCondomini\\GestioneCondomini\\GestioneCondomini\\GestioneCondomini.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gabriele\\Desktop\\Repo\\GestioneCondomini\\GestioneCondomini\\GestioneCondomini.csproj": {
+    "C:\\Users\\Gabriele\\Desktop\\Repo\\GestioneCondomini\\GestioneCondomini\\GestioneCondomini\\GestioneCondomini.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriele\\Desktop\\Repo\\GestioneCondomini\\GestioneCondomini\\GestioneCondomini.csproj",
+        "projectUniqueName": "C:\\Users\\Gabriele\\Desktop\\Repo\\GestioneCondomini\\GestioneCondomini\\GestioneCondomini\\GestioneCondomini.csproj",
         "projectName": "GestioneCondomini",
-        "projectPath": "C:\\Users\\Gabriele\\Desktop\\Repo\\GestioneCondomini\\GestioneCondomini\\GestioneCondomini.csproj",
+        "projectPath": "C:\\Users\\Gabriele\\Desktop\\Repo\\GestioneCondomini\\GestioneCondomini\\GestioneCondomini\\GestioneCondomini.csproj",
         "packagesPath": "C:\\Users\\Gabriele\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriele\\Desktop\\Repo\\GestioneCondomini\\GestioneCondomini\\obj\\",
+        "outputPath": "C:\\Users\\Gabriele\\Desktop\\Repo\\GestioneCondomini\\GestioneCondomini\\GestioneCondomini\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
