@@ -27,5 +27,6 @@ namespace GestioneCondomini
             public string password;
 
         }
-    }
+       
+}
 }

@@ -1,32 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 
 namespace GestioneCondomini
 {
     public partial class Form1 : Form
     {
-       public MyF.ute[] utent = new MyF.ute[100];
+        public MyF.ute[] utent = new MyF.ute[100];
         int x = 0;
         public Form1()
         {
             String line;
-            
+
             try
             {
-              
+
                 StreamReader sr = new StreamReader("utenti");
-             
+
                 line = sr.ReadLine();
-                
+
                 while (line != null)
                 {
 
@@ -59,20 +52,21 @@ namespace GestioneCondomini
         private void btn_login_Click(object sender, EventArgs e)
         {
             int y = 0;
-            while (y <x) 
+            while (y < x)
             {
-              if (txt_utente.Text==utent[y].nomeutente && txt_password.Text== utent[y].password)
-              {
-                this.Hide();
-                var form2 = new Form2();
-                form2.us = utent[y].id;
-                form2.uten=utent;
-                form2.Closed += (s, args) => this.Close();
-                form2.Show();
-                break;
-              }
-              
-              y = y + 1;
+                if (txt_utente.Text == utent[y].nomeutente && txt_password.Text == utent[y].password)
+                {
+                    this.Hide();
+                    var form2 = new Form2();
+                    form2.us = utent[y].id;
+                    form2.uten[0] = utent[y];
+                    form2.Closed += (s, args) => this.Close();
+                    
+                    form2.Show();
+                    break;
+                }
+
+                y = y + 1;
             }
 
 

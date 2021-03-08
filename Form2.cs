@@ -1,24 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 namespace GestioneCondomini
 {
     public partial class Form2 : Form
     {
-        public int us;
+        
+         
         int num = 0;
-        public MyF.ute[] uten = new MyF.ute[100];
+        public int us;
+        public MyF.ute[] uten = new MyF.ute[1];
         public MyF.condomino[] co = new MyF.condomino[100];
 
         public Form2()
         {
             String line;
+            
 
             try
             {
@@ -48,26 +46,33 @@ namespace GestioneCondomini
                     num = num + 1;
                     line = sr.ReadLine();
                 }
-                //close the file
+                
 
                 sr.Close();
 
             }
             catch (Exception e)
             {
-                Console.WriteLine("Exception: " + e.Message);
+                MessageBox.Show("Exception: " + e.Message);
             }
-            
-            InitializeComponent();
-            lbl_utente.Text = co[us].id_c.ToString();
 
+            InitializeComponent();
+
+           // lbl_utente.Text = co[uten[0].id].cognome.ToString();
+            lbl_utente.Text = co[us].cognome.ToString();
         }
 
-        
+
 
         private void btn_chiudi_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }
