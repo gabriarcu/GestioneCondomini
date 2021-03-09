@@ -1,3 +1,3 @@
-0;;Amministratore;Admin;01/01/01;;1234567890;admino@demo.it;;admin;admin
-1;AAABBB75A12A111B;Rossi;Mario;01/01/01;Milano;3331234567;mario@demo.it;100;mario;mario
-2;BBBAAA80B30B222C;Verdi;Carlo;02/02/02;Bergamo;3457654321;carlo@demo.it;200;carlo;carlo
+0;;Amministratore;Admin;01/01/01;;1234567890;admino@demo.it;0.00;admin;admin
+1;AAABBB75A12A111B;Rossi;Mario;01/01/01;Milano;3331234567;mario@demo.it;100.00;mario;mario
+2;BBBAAA80B30B222C;Verdi;Carlo;02/02/02;Bergamo;3457654321;carlo@demo.it;200.00;carlo;carlo

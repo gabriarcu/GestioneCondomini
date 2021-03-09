@@ -61,7 +61,7 @@ namespace GestioneCondomini
                     form2.us = utent[y].id;
                     form2.uten[0] = utent[y];
                     form2.Closed += (s, args) => this.Close();
-                    
+
                     form2.Show();
                     break;
                 }

@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GestioneCondomini
 {
     public class MyF
     {
-        public struct ute 
+        public struct ute
         {
             public int id;
             public string nomeutente;
@@ -27,6 +25,21 @@ namespace GestioneCondomini
             public string password;
 
         }
-       
-}
+        public struct riunione
+        {
+            public int numero;
+            public string tipo;
+            public DateTime dat;
+            public orario ora;
+            public string luogo;
+            public string oggetto;
+            public string odg;
+        }
+        public struct orario
+        {
+            public int ore;
+            public int minuti;
+        }
+
+    }
 }
