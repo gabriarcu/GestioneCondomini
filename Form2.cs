@@ -254,5 +254,22 @@ namespace GestioneCondomini
                 x++;
             }
         }
+
+        private void listView3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView3.SelectedItems.Count > 0)
+            {
+                string numprog = default;
+                ListView.SelectedListViewItemCollection r =
+                this.listView3.SelectedItems;
+
+
+                foreach (ListViewItem item in r)
+                {
+                   numprog += item.SubItems[0].Text;
+                }
+                txt_odg.Text = riu[int.Parse(numprog)].odg;
+            }
+        }
     }
 }
