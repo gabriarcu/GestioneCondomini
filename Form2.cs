@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace GestioneCondomini
@@ -9,9 +10,11 @@ namespace GestioneCondomini
 
 
         int num = 0;
+        public int prog = 0;
         public int us;
         public MyF.ute[] uten = new MyF.ute[1];
         public MyF.condomino[] co = new MyF.condomino[100];
+        public MyF.riunione[] riu = new MyF.riunione[100];
 
         public Form2()
         {
@@ -161,6 +164,7 @@ namespace GestioneCondomini
         {
             tabControl1.SelectTab(3);
             int x = 1;
+            lst_condomini.Items.Clear();
             while(x<num)
             {
                 string riga = co[x].id_c + " - " + co[x].cognome + " - " + co[x].nome;
@@ -184,6 +188,71 @@ namespace GestioneCondomini
                 }
             );
             listView2.Items.Add(riga);
+        }
+
+        private void btn_salvaRiunioni_Click(object sender, EventArgs e)
+        {
+            riu[prog].numero = prog+1;
+            riu[prog].tipo = cbo_tipo.SelectedItem.ToString();
+            riu[prog].dat = dateTimePickerRiunione.Value;
+            riu[prog].ora.ore = numericUpDownOre.Value;
+            riu[prog].ora.minuti = numericUpDownMinuti.Value;
+            riu[prog].luogo = txt_luofoRiunione.Text;
+            riu[prog].oggetto = txt_oggetto.Text;
+            riu[prog].odg = txt_odg.Text;
+            prog = prog + 1;
+
+        }
+
+        private void btn_salvaCondomini_Click(object sender, EventArgs e)
+        {
+            string ma;
+            ma = txt_email.Text;
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Console.WriteLine($"The email is {ma}");
+            bool isValidEmail = regex.IsMatch(ma);
+
+
+            if (!isValidEmail)
+            {
+                lbl_avviso.Text="Email non valida";
+            }
+            
+        }
+
+        private void btn_GestioneRiunioni_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(2);
+            txt_progressivo.Text = (prog + 1).ToString();
+        }
+
+        private void btn_ElencoRiunioni_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(4);
+            int x = 0;
+
+            ListViewItem Riga;
+            listView3.Items.Clear();
+
+            while (x < prog)
+            {
+                Riga = new ListViewItem(new string[]
+                {
+                    riu[x].numero.ToString(),
+                    riu[x].tipo,
+                    riu[x].dat.ToString("d"),
+                    $"{riu[x].ora.ore.ToString("00")}:{riu[x].ora.minuti.ToString("00")}",
+                    riu[x].luogo,
+                    riu[x].oggetto
+                }
+
+                );
+
+                listView3.Items.Add(Riga);
+
+
+                x++;
+            }
         }
     }
 }

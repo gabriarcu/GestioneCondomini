@@ -37,8 +37,8 @@ namespace GestioneCondomini
         }
         public struct orario
         {
-            public int ore;
-            public int minuti;
+            public decimal ore;
+            public decimal minuti;
         }
 
     }

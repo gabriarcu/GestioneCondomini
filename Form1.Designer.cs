@@ -65,6 +65,7 @@ namespace GestioneCondomini
             this.txt_utente.Name = "txt_utente";
             this.txt_utente.Size = new System.Drawing.Size(160, 32);
             this.txt_utente.TabIndex = 2;
+            this.txt_utente.Text = "admin";
             // 
             // txt_password
             // 
@@ -74,6 +75,7 @@ namespace GestioneCondomini
             this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(160, 32);
             this.txt_password.TabIndex = 3;
+            this.txt_password.Text = "admin";
             // 
             // btn_login
             // 

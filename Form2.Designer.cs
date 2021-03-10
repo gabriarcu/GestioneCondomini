@@ -45,18 +45,19 @@ namespace GestioneCondomini
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbl_avviso = new System.Windows.Forms.Label();
+            this.dateTimePickerNascita = new System.Windows.Forms.DateTimePicker();
+            this.btn_salvaCondomini = new System.Windows.Forms.Button();
+            this.txt_password = new System.Windows.Forms.TextBox();
+            this.txt_user = new System.Windows.Forms.TextBox();
+            this.txt_millesimi = new System.Windows.Forms.TextBox();
+            this.txt_email = new System.Windows.Forms.TextBox();
+            this.txt_telefono = new System.Windows.Forms.TextBox();
+            this.Txt_luodoNascita = new System.Windows.Forms.TextBox();
+            this.txt_nome = new System.Windows.Forms.TextBox();
+            this.txt_cognome = new System.Windows.Forms.TextBox();
+            this.txt_fiscale = new System.Windows.Forms.TextBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -82,12 +83,38 @@ namespace GestioneCondomini
             this.columnHeader10 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader11 = new System.Windows.Forms.ColumnHeader();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_salvaRiunioni = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.numericUpDownMinuti = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownOre = new System.Windows.Forms.NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
+            this.cbo_tipo = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerRiunione = new System.Windows.Forms.DateTimePicker();
+            this.txt_luofoRiunione = new System.Windows.Forms.TextBox();
+            this.txt_odg = new System.Windows.Forms.TextBox();
+            this.txt_oggetto = new System.Windows.Forms.TextBox();
+            this.txt_progressivo = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader12 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader13 = new System.Windows.Forms.ColumnHeader();
             this.lst_condomini = new System.Windows.Forms.ListBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.columnHeader14 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader15 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader16 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader17 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader18 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader19 = new System.Windows.Forms.ColumnHeader();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -97,7 +124,11 @@ namespace GestioneCondomini
             this.tabControl2.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinuti)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOre)).BeginInit();
             this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -162,6 +193,7 @@ namespace GestioneCondomini
             this.btn_ElencoRiunioni.TabIndex = 3;
             this.btn_ElencoRiunioni.Text = "Elenco riunioni";
             this.btn_ElencoRiunioni.UseVisualStyleBackColor = false;
+            this.btn_ElencoRiunioni.Click += new System.EventHandler(this.btn_ElencoRiunioni_Click);
             // 
             // btn_ElencoCondomini
             // 
@@ -191,6 +223,7 @@ namespace GestioneCondomini
             this.btn_GestioneRiunioni.TabIndex = 1;
             this.btn_GestioneRiunioni.Text = "Gestione Riunioni";
             this.btn_GestioneRiunioni.UseVisualStyleBackColor = false;
+            this.btn_GestioneRiunioni.Click += new System.EventHandler(this.btn_GestioneRiunioni_Click);
             // 
             // btn_gestioneCondomini
             // 
@@ -291,18 +324,19 @@ namespace GestioneCondomini
             // 
             // tabPage6
             // 
-            this.tabPage6.Controls.Add(this.dateTimePicker1);
-            this.tabPage6.Controls.Add(this.button1);
-            this.tabPage6.Controls.Add(this.textBox7);
-            this.tabPage6.Controls.Add(this.textBox8);
-            this.tabPage6.Controls.Add(this.textBox9);
-            this.tabPage6.Controls.Add(this.textBox10);
-            this.tabPage6.Controls.Add(this.textBox11);
-            this.tabPage6.Controls.Add(this.textBox6);
-            this.tabPage6.Controls.Add(this.textBox4);
-            this.tabPage6.Controls.Add(this.textBox3);
-            this.tabPage6.Controls.Add(this.textBox2);
-            this.tabPage6.Controls.Add(this.textBox1);
+            this.tabPage6.Controls.Add(this.lbl_avviso);
+            this.tabPage6.Controls.Add(this.dateTimePickerNascita);
+            this.tabPage6.Controls.Add(this.btn_salvaCondomini);
+            this.tabPage6.Controls.Add(this.txt_password);
+            this.tabPage6.Controls.Add(this.txt_user);
+            this.tabPage6.Controls.Add(this.txt_millesimi);
+            this.tabPage6.Controls.Add(this.txt_email);
+            this.tabPage6.Controls.Add(this.txt_telefono);
+            this.tabPage6.Controls.Add(this.Txt_luodoNascita);
+            this.tabPage6.Controls.Add(this.txt_nome);
+            this.tabPage6.Controls.Add(this.txt_cognome);
+            this.tabPage6.Controls.Add(this.txt_fiscale);
+            this.tabPage6.Controls.Add(this.txt_id);
             this.tabPage6.Controls.Add(this.label13);
             this.tabPage6.Controls.Add(this.label12);
             this.tabPage6.Controls.Add(this.label11);
@@ -322,97 +356,107 @@ namespace GestioneCondomini
             this.tabPage6.Text = "Inserimento";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // lbl_avviso
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(204, 283);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(185, 32);
-            this.dateTimePicker1.TabIndex = 23;
+            this.lbl_avviso.AutoSize = true;
+            this.lbl_avviso.ForeColor = System.Drawing.Color.Red;
+            this.lbl_avviso.Location = new System.Drawing.Point(857, 112);
+            this.lbl_avviso.Name = "lbl_avviso";
+            this.lbl_avviso.Size = new System.Drawing.Size(0, 27);
+            this.lbl_avviso.TabIndex = 24;
             // 
-            // button1
+            // dateTimePickerNascita
             // 
-            this.button1.BackColor = System.Drawing.Color.Teal;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(716, 335);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 48);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Salva";
-            this.button1.UseVisualStyleBackColor = false;
+            this.dateTimePickerNascita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerNascita.Location = new System.Drawing.Point(204, 283);
+            this.dateTimePickerNascita.Name = "dateTimePickerNascita";
+            this.dateTimePickerNascita.Size = new System.Drawing.Size(185, 32);
+            this.dateTimePickerNascita.TabIndex = 23;
             // 
-            // textBox7
+            // btn_salvaCondomini
             // 
-            this.textBox7.Location = new System.Drawing.Point(651, 283);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(185, 32);
-            this.textBox7.TabIndex = 21;
+            this.btn_salvaCondomini.BackColor = System.Drawing.Color.Teal;
+            this.btn_salvaCondomini.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_salvaCondomini.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
+            this.btn_salvaCondomini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salvaCondomini.ForeColor = System.Drawing.Color.White;
+            this.btn_salvaCondomini.Location = new System.Drawing.Point(716, 335);
+            this.btn_salvaCondomini.Name = "btn_salvaCondomini";
+            this.btn_salvaCondomini.Size = new System.Drawing.Size(120, 48);
+            this.btn_salvaCondomini.TabIndex = 22;
+            this.btn_salvaCondomini.Text = "Salva";
+            this.btn_salvaCondomini.UseVisualStyleBackColor = false;
+            this.btn_salvaCondomini.Click += new System.EventHandler(this.btn_salvaCondomini_Click);
             // 
-            // textBox8
+            // txt_password
             // 
-            this.textBox8.Location = new System.Drawing.Point(651, 225);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(185, 32);
-            this.textBox8.TabIndex = 20;
+            this.txt_password.Location = new System.Drawing.Point(651, 283);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(185, 32);
+            this.txt_password.TabIndex = 21;
             // 
-            // textBox9
+            // txt_user
             // 
-            this.textBox9.Location = new System.Drawing.Point(651, 167);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(185, 32);
-            this.textBox9.TabIndex = 19;
+            this.txt_user.Location = new System.Drawing.Point(651, 225);
+            this.txt_user.Name = "txt_user";
+            this.txt_user.Size = new System.Drawing.Size(185, 32);
+            this.txt_user.TabIndex = 20;
             // 
-            // textBox10
+            // txt_millesimi
             // 
-            this.textBox10.Location = new System.Drawing.Point(651, 109);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(185, 32);
-            this.textBox10.TabIndex = 18;
+            this.txt_millesimi.Location = new System.Drawing.Point(651, 167);
+            this.txt_millesimi.Name = "txt_millesimi";
+            this.txt_millesimi.Size = new System.Drawing.Size(185, 32);
+            this.txt_millesimi.TabIndex = 19;
             // 
-            // textBox11
+            // txt_email
             // 
-            this.textBox11.Location = new System.Drawing.Point(651, 51);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(185, 32);
-            this.textBox11.TabIndex = 17;
+            this.txt_email.Location = new System.Drawing.Point(651, 109);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(185, 32);
+            this.txt_email.TabIndex = 18;
             // 
-            // textBox6
+            // txt_telefono
             // 
-            this.textBox6.Location = new System.Drawing.Point(204, 343);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(185, 32);
-            this.textBox6.TabIndex = 16;
+            this.txt_telefono.Location = new System.Drawing.Point(651, 51);
+            this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.Size = new System.Drawing.Size(185, 32);
+            this.txt_telefono.TabIndex = 17;
             // 
-            // textBox4
+            // Txt_luodoNascita
             // 
-            this.textBox4.Location = new System.Drawing.Point(204, 227);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 32);
-            this.textBox4.TabIndex = 14;
+            this.Txt_luodoNascita.Location = new System.Drawing.Point(204, 343);
+            this.Txt_luodoNascita.Name = "Txt_luodoNascita";
+            this.Txt_luodoNascita.Size = new System.Drawing.Size(185, 32);
+            this.Txt_luodoNascita.TabIndex = 16;
             // 
-            // textBox3
+            // txt_nome
             // 
-            this.textBox3.Location = new System.Drawing.Point(204, 169);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(185, 32);
-            this.textBox3.TabIndex = 13;
+            this.txt_nome.Location = new System.Drawing.Point(204, 227);
+            this.txt_nome.Name = "txt_nome";
+            this.txt_nome.Size = new System.Drawing.Size(185, 32);
+            this.txt_nome.TabIndex = 14;
             // 
-            // textBox2
+            // txt_cognome
             // 
-            this.textBox2.Location = new System.Drawing.Point(204, 111);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(185, 32);
-            this.textBox2.TabIndex = 12;
+            this.txt_cognome.Location = new System.Drawing.Point(204, 169);
+            this.txt_cognome.Name = "txt_cognome";
+            this.txt_cognome.Size = new System.Drawing.Size(185, 32);
+            this.txt_cognome.TabIndex = 13;
             // 
-            // textBox1
+            // txt_fiscale
             // 
-            this.textBox1.Location = new System.Drawing.Point(204, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(102, 32);
-            this.textBox1.TabIndex = 11;
+            this.txt_fiscale.Location = new System.Drawing.Point(204, 111);
+            this.txt_fiscale.Name = "txt_fiscale";
+            this.txt_fiscale.Size = new System.Drawing.Size(185, 32);
+            this.txt_fiscale.TabIndex = 12;
+            // 
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(204, 53);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(102, 32);
+            this.txt_id.TabIndex = 11;
             // 
             // label13
             // 
@@ -604,6 +648,23 @@ namespace GestioneCondomini
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btn_salvaRiunioni);
+            this.tabPage3.Controls.Add(this.label21);
+            this.tabPage3.Controls.Add(this.numericUpDownMinuti);
+            this.tabPage3.Controls.Add(this.numericUpDownOre);
+            this.tabPage3.Controls.Add(this.label20);
+            this.tabPage3.Controls.Add(this.cbo_tipo);
+            this.tabPage3.Controls.Add(this.dateTimePickerRiunione);
+            this.tabPage3.Controls.Add(this.txt_luofoRiunione);
+            this.tabPage3.Controls.Add(this.txt_odg);
+            this.tabPage3.Controls.Add(this.txt_oggetto);
+            this.tabPage3.Controls.Add(this.txt_progressivo);
+            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Controls.Add(this.label16);
+            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Controls.Add(this.label18);
+            this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Location = new System.Drawing.Point(4, 36);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -611,6 +672,177 @@ namespace GestioneCondomini
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Gestione Riunioni";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btn_salvaRiunioni
+            // 
+            this.btn_salvaRiunioni.BackColor = System.Drawing.Color.Teal;
+            this.btn_salvaRiunioni.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_salvaRiunioni.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
+            this.btn_salvaRiunioni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salvaRiunioni.ForeColor = System.Drawing.Color.White;
+            this.btn_salvaRiunioni.Location = new System.Drawing.Point(1103, 352);
+            this.btn_salvaRiunioni.Name = "btn_salvaRiunioni";
+            this.btn_salvaRiunioni.Size = new System.Drawing.Size(120, 48);
+            this.btn_salvaRiunioni.TabIndex = 41;
+            this.btn_salvaRiunioni.Text = "Salva";
+            this.btn_salvaRiunioni.UseVisualStyleBackColor = false;
+            this.btn_salvaRiunioni.Click += new System.EventHandler(this.btn_salvaRiunioni_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(283, 250);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(20, 27);
+            this.label21.TabIndex = 40;
+            this.label21.Text = ":";
+            // 
+            // numericUpDownMinuti
+            // 
+            this.numericUpDownMinuti.Location = new System.Drawing.Point(309, 250);
+            this.numericUpDownMinuti.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.numericUpDownMinuti.Name = "numericUpDownMinuti";
+            this.numericUpDownMinuti.Size = new System.Drawing.Size(58, 32);
+            this.numericUpDownMinuti.TabIndex = 39;
+            // 
+            // numericUpDownOre
+            // 
+            this.numericUpDownOre.Location = new System.Drawing.Point(219, 248);
+            this.numericUpDownOre.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.numericUpDownOre.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownOre.Name = "numericUpDownOre";
+            this.numericUpDownOre.Size = new System.Drawing.Size(58, 32);
+            this.numericUpDownOre.TabIndex = 38;
+            this.numericUpDownOre.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(165, 250);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(46, 27);
+            this.label20.TabIndex = 37;
+            this.label20.Text = "Ora";
+            // 
+            // cbo_tipo
+            // 
+            this.cbo_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_tipo.FormattingEnabled = true;
+            this.cbo_tipo.Items.AddRange(new object[] {
+            "Ordinaria",
+            "Straordinaria"});
+            this.cbo_tipo.Location = new System.Drawing.Point(219, 129);
+            this.cbo_tipo.Name = "cbo_tipo";
+            this.cbo_tipo.Size = new System.Drawing.Size(182, 35);
+            this.cbo_tipo.TabIndex = 36;
+            // 
+            // dateTimePickerRiunione
+            // 
+            this.dateTimePickerRiunione.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerRiunione.Location = new System.Drawing.Point(217, 190);
+            this.dateTimePickerRiunione.Name = "dateTimePickerRiunione";
+            this.dateTimePickerRiunione.Size = new System.Drawing.Size(185, 32);
+            this.dateTimePickerRiunione.TabIndex = 35;
+            // 
+            // txt_luofoRiunione
+            // 
+            this.txt_luofoRiunione.Location = new System.Drawing.Point(217, 306);
+            this.txt_luofoRiunione.Name = "txt_luofoRiunione";
+            this.txt_luofoRiunione.Size = new System.Drawing.Size(185, 32);
+            this.txt_luofoRiunione.TabIndex = 34;
+            // 
+            // txt_odg
+            // 
+            this.txt_odg.Location = new System.Drawing.Point(527, 115);
+            this.txt_odg.Multiline = true;
+            this.txt_odg.Name = "txt_odg";
+            this.txt_odg.Size = new System.Drawing.Size(497, 285);
+            this.txt_odg.TabIndex = 33;
+            // 
+            // txt_oggetto
+            // 
+            this.txt_oggetto.Location = new System.Drawing.Point(217, 364);
+            this.txt_oggetto.Name = "txt_oggetto";
+            this.txt_oggetto.Size = new System.Drawing.Size(185, 32);
+            this.txt_oggetto.TabIndex = 32;
+            // 
+            // txt_progressivo
+            // 
+            this.txt_progressivo.Location = new System.Drawing.Point(217, 71);
+            this.txt_progressivo.Name = "txt_progressivo";
+            this.txt_progressivo.ReadOnly = true;
+            this.txt_progressivo.Size = new System.Drawing.Size(102, 32);
+            this.txt_progressivo.TabIndex = 30;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(144, 309);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(67, 27);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "Luogo";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(71, 195);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(140, 27);
+            this.label15.TabIndex = 28;
+            this.label15.Text = "Data Riunione";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(527, 74);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(175, 27);
+            this.label16.TabIndex = 27;
+            this.label16.Text = "Ordine del giorno";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(125, 367);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(86, 27);
+            this.label17.TabIndex = 26;
+            this.label17.Text = "Oggetto";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(159, 132);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(52, 27);
+            this.label18.TabIndex = 25;
+            this.label18.Text = "Tipo";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(13, 74);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(198, 27);
+            this.label19.TabIndex = 24;
+            this.label19.Text = "Numero progressivo";
             // 
             // tabPage4
             // 
@@ -658,12 +890,81 @@ namespace GestioneCondomini
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label22);
+            this.tabPage5.Controls.Add(this.textBox1);
+            this.tabPage5.Controls.Add(this.listView3);
             this.tabPage5.Location = new System.Drawing.Point(4, 36);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1442, 503);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Elenco Riunioni";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(1081, 21);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(175, 27);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "Ordine del giorno";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(977, 51);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(433, 444);
+            this.textBox1.TabIndex = 1;
+            // 
+            // listView3
+            // 
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19});
+            this.listView3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.listView3.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listView3.HideSelection = false;
+            this.listView3.Location = new System.Drawing.Point(0, 0);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(971, 503);
+            this.listView3.TabIndex = 0;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "N° progr";
+            this.columnHeader14.Width = 100;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Tipo";
+            this.columnHeader15.Width = 150;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Data";
+            this.columnHeader16.Width = 130;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Orario";
+            this.columnHeader17.Width = 100;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Luogo";
+            this.columnHeader18.Width = 280;
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Oggetto";
+            this.columnHeader19.Width = 200;
             // 
             // Form2
             // 
@@ -687,7 +988,13 @@ namespace GestioneCondomini
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             this.tabPage7.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinuti)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOre)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -725,18 +1032,18 @@ namespace GestioneCondomini
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btn_salvaCondomini;
+        private System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.TextBox txt_user;
+        private System.Windows.Forms.TextBox txt_millesimi;
+        private System.Windows.Forms.TextBox txt_email;
+        private System.Windows.Forms.TextBox txt_telefono;
+        private System.Windows.Forms.TextBox Txt_luodoNascita;
+        private System.Windows.Forms.TextBox txt_nome;
+        private System.Windows.Forms.TextBox txt_cognome;
+        private System.Windows.Forms.TextBox txt_fiscale;
+        private System.Windows.Forms.TextBox txt_id;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNascita;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -753,5 +1060,32 @@ namespace GestioneCondomini
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.Button btn_salvaRiunioni;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.NumericUpDown numericUpDownMinuti;
+        private System.Windows.Forms.NumericUpDown numericUpDownOre;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox cbo_tipo;
+        private System.Windows.Forms.DateTimePicker dateTimePickerRiunione;
+        private System.Windows.Forms.TextBox txt_luofoRiunione;
+        private System.Windows.Forms.TextBox txt_odg;
+        private System.Windows.Forms.TextBox txt_oggetto;
+        private System.Windows.Forms.TextBox txt_progressivo;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lbl_avviso;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
     }
 }
