@@ -84,6 +84,7 @@ namespace GestioneCondomini
             this.columnHeader10 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader11 = new System.Windows.Forms.ColumnHeader();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.btn_salvaRiunioni = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.numericUpDownMinuti = new System.Windows.Forms.NumericUpDown();
@@ -108,7 +109,7 @@ namespace GestioneCondomini
             this.lst_condomini = new System.Windows.Forms.ListBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_riunioniOdg = new System.Windows.Forms.TextBox();
             this.listView3 = new System.Windows.Forms.ListView();
             this.columnHeader14 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader15 = new System.Windows.Forms.ColumnHeader();
@@ -116,7 +117,6 @@ namespace GestioneCondomini
             this.columnHeader17 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader18 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader19 = new System.Windows.Forms.ColumnHeader();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -687,6 +687,14 @@ namespace GestioneCondomini
             this.tabPage3.Text = "Gestione Riunioni";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(1043, 31);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(391, 285);
+            this.textBox2.TabIndex = 42;
+            // 
             // btn_salvaRiunioni
             // 
             this.btn_salvaRiunioni.BackColor = System.Drawing.Color.Teal;
@@ -905,7 +913,7 @@ namespace GestioneCondomini
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.label22);
-            this.tabPage5.Controls.Add(this.textBox1);
+            this.tabPage5.Controls.Add(this.txt_riunioniOdg);
             this.tabPage5.Controls.Add(this.listView3);
             this.tabPage5.Location = new System.Drawing.Point(4, 36);
             this.tabPage5.Name = "tabPage5";
@@ -923,13 +931,13 @@ namespace GestioneCondomini
             this.label22.TabIndex = 2;
             this.label22.Text = "Ordine del giorno";
             // 
-            // textBox1
+            // txt_riunioniOdg
             // 
-            this.textBox1.Location = new System.Drawing.Point(977, 51);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(433, 452);
-            this.textBox1.TabIndex = 1;
+            this.txt_riunioniOdg.Location = new System.Drawing.Point(977, 51);
+            this.txt_riunioniOdg.Multiline = true;
+            this.txt_riunioniOdg.Name = "txt_riunioniOdg";
+            this.txt_riunioniOdg.Size = new System.Drawing.Size(433, 452);
+            this.txt_riunioniOdg.TabIndex = 1;
             // 
             // listView3
             // 
@@ -942,6 +950,7 @@ namespace GestioneCondomini
             this.columnHeader19});
             this.listView3.Dock = System.Windows.Forms.DockStyle.Left;
             this.listView3.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listView3.FullRowSelect = true;
             this.listView3.GridLines = true;
             this.listView3.HideSelection = false;
             this.listView3.Location = new System.Drawing.Point(0, 0);
@@ -981,14 +990,6 @@ namespace GestioneCondomini
             // 
             this.columnHeader19.Text = "Oggetto";
             this.columnHeader19.Width = 200;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(1043, 31);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(391, 285);
-            this.textBox2.TabIndex = 42;
             // 
             // Form2
             // 
@@ -1103,7 +1104,7 @@ namespace GestioneCondomini
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label lbl_avviso;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_riunioniOdg;
         private System.Windows.Forms.ListView listView3;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader15;

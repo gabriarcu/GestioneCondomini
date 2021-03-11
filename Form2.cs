@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -100,7 +101,10 @@ namespace GestioneCondomini
                 btn_gestioneCondomini.Visible = false;
                 btn_GestioneRiunioni.Visible = false;
             }
-
+            
+            tabControl1.Appearance = TabAppearance.FlatButtons;
+            tabControl1.ItemSize = new Size(0, 1);
+            tabControl1.SizeMode = TabSizeMode.Fixed;
             lbl_utente.Text = co[us].cognome.ToString() + " " + co[us].nome.ToString();
 
 
@@ -291,18 +295,19 @@ namespace GestioneCondomini
         {
             if (listView3.SelectedItems.Count > 0)
             {
-                string odg = default;
+                string Rodg = default;
                 ListView.SelectedListViewItemCollection r =
                 this.listView3.SelectedItems;
 
 
                 foreach (ListViewItem item in r)
                 {
-                   odg += item.SubItems[6].Text;
+                    Rodg += item.SubItems[6].Text;
                 }
-                label23.Text = odg;
-                // txt_odg.Text = riu[int.Parse(numprog)].odg;
-                txt_odg.Text = odg;
+
+                
+                txt_riunioniOdg.Text = Rodg;
+
             }
         }
     }
