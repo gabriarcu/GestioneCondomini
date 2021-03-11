@@ -65,6 +65,36 @@ namespace GestioneCondomini
 
             sr.Close();
 
+            
+            
+            String line1;
+
+            StreamReader sr1 = new StreamReader("riunioni");
+
+            line1 = sr1.ReadLine();
+
+            while (line1 != null)
+            {
+
+                string[] ix = line1.Split(';');
+                riu[prog].numero= int.Parse(ix[0].ToString());
+                riu[prog].tipo= ix[1].ToString();
+                riu[prog].dat = DateTime.Parse(ix[2]);
+                string[] tempo = ix[3].Split(":");
+                riu[prog].ora.ore =int.Parse(tempo[0]);
+                riu[prog].ora.minuti = int.Parse(tempo[1]);
+                riu[prog].luogo = ix[4].ToString();
+                riu[prog].oggetto= ix[5].ToString();
+                riu[prog].odg = ix[6].ToString();
+               
+                prog = prog + 1;
+                line1 = sr1.ReadLine();
+            }
+
+            sr1.Close();
+
+
+
             if (us!=0)
             {
                 btn_gestioneCondomini.Visible = false;
@@ -167,7 +197,7 @@ namespace GestioneCondomini
             lst_condomini.Items.Clear();
             while(x<num)
             {
-                string riga = co[x].id_c + " - " + co[x].cognome + " - " + co[x].nome;
+                string riga = co[x].id_c + " - " + co[x].cognome + " " + co[x].nome;
                 lst_condomini.Items.Add(riga);
                 x = x + 1;
             }
@@ -200,6 +230,7 @@ namespace GestioneCondomini
             riu[prog].luogo = txt_luofoRiunione.Text;
             riu[prog].oggetto = txt_oggetto.Text;
             riu[prog].odg = txt_odg.Text;
+            
             prog = prog + 1;
 
         }
@@ -243,10 +274,11 @@ namespace GestioneCondomini
                     riu[x].dat.ToString("d"),
                     $"{riu[x].ora.ore.ToString("00")}:{riu[x].ora.minuti.ToString("00")}",
                     riu[x].luogo,
-                    riu[x].oggetto
+                    riu[x].oggetto,
+                    riu[x].odg
                 }
 
-                );
+                ) ;
 
                 listView3.Items.Add(Riga);
 
@@ -259,16 +291,18 @@ namespace GestioneCondomini
         {
             if (listView3.SelectedItems.Count > 0)
             {
-                string numprog = default;
+                string odg = default;
                 ListView.SelectedListViewItemCollection r =
                 this.listView3.SelectedItems;
 
 
                 foreach (ListViewItem item in r)
                 {
-                   numprog += item.SubItems[0].Text;
+                   odg += item.SubItems[6].Text;
                 }
-                txt_odg.Text = riu[int.Parse(numprog)].odg;
+                label23.Text = odg;
+                // txt_odg.Text = riu[int.Parse(numprog)].odg;
+                txt_odg.Text = odg;
             }
         }
     }
