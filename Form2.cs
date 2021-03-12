@@ -192,6 +192,7 @@ namespace GestioneCondomini
 
                 x++;
             }
+            txt_id.Text = (num).ToString();
         }
 
         private void btn_ElencoCondomini_Click(object sender, EventArgs e)
@@ -233,18 +234,54 @@ namespace GestioneCondomini
             riu[prog].ora.minuti = numericUpDownMinuti.Value;
             riu[prog].luogo = txt_luofoRiunione.Text;
             riu[prog].oggetto = txt_oggetto.Text;
-            riu[prog].odg = txt_odg.Text;
+            //riu[prog].odg = txt_odg.Text;
             
+
+            string[] lineaTesto = richTextBox1.Lines;
+            string testo = default;
+            foreach (string line in lineaTesto)
+            {
+                testo += line + "*";
+            }
+            riu[prog].odg = testo; 
+            
+            string tt = $"{riu[prog].ora.ore}:{riu[prog].ora.minuti}";
+            //Pass the filepath and filename to the StreamWriter Constructor
+            //StreamWriter sw = new StreamWriter("riunioni");
+            StreamWriter sw = File.AppendText("riunioni");
+            //Write a line of text
+            string linea = $"{riu[prog].numero};{riu[prog].tipo};{riu[prog].dat.ToString("d")};{tt};{riu[prog].luogo};{riu[prog].oggetto};{riu[prog].odg}";
+        
+            sw.WriteLine(linea);
+
+            //Close the file
+            sw.Close();
+
             prog = prog + 1;
+
 
         }
 
         private void btn_salvaCondomini_Click(object sender, EventArgs e)
         {
+            co[num].id_c = int.Parse(txt_id.Text);
+            co[num].fiscale = txt_fiscale.Text;
+            co[num].cognome = txt_cognome.Text;
+            co[num].nome = txt_nome.Text;
+            co[num].nascita = dateTimePickerNascita.Value;
+            co[num].luogoNascita = Txt_luodoNascita.Text;
+            co[num].telefono = txt_telefono.Text;
+            co[num].email = txt_email.Text;
+            co[num].millesimi = int.Parse(txt_millesimi.Text);
+            co[num].user = txt_user.Text;
+            co[num].password = txt_password.Text;
+            num = num + 1;
+
+
             string ma;
             ma = txt_email.Text;
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            Console.WriteLine($"The email is {ma}");
+            lbl_avviso.Text=($"The email is {ma}");
             bool isValidEmail = regex.IsMatch(ma);
 
 
@@ -305,10 +342,40 @@ namespace GestioneCondomini
                     Rodg += item.SubItems[6].Text;
                 }
 
-                
-                txt_riunioniOdg.Text = Rodg;
+                string[] txt = Rodg.Split("*");
+
+                int xx = 0;
+                richTextBox2.Clear();
+                while (xx < Rodg.Split("*").Length)
+                {
+                    richTextBox2.AppendText(txt[xx] + "\n");
+                    xx = xx + 1;
+                }
 
             }
+
+
+                
+
+            }
+
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+            string ma;
+            ma = txt_email.Text;
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            lbl_avviso.Text = ($"The email is {ma}");
+            bool isValidEmail = regex.IsMatch(ma);
+
+
+            if (!isValidEmail)
+            {
+                lbl_avviso.Text = "Email non valida";
+            }
+            else
+                
+                lbl_avviso.Text = "Email valida";
         }
     }
-}
+    }
+
