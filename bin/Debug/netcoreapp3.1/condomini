@@ -1,3 +1,9 @@
-0;;Amministratore;Admin;01/01/01;;1234567890;admino@demo.it;0,00;admin;admin
+0;CodiceFiscale;Amministratore;Admin;01/01/01;;1234567890;admino@demo.it;0,00;admin;admin
 1;AAABBB75A12A111B;Rossi;Mario;01/01/01;Milano;3331234567;mario@demo.it;100,00;mario;mario
 2;BBBAAA80B30B222C;Verdi;Carlo;02/02/02;Bergamo;3457654321;carlo@demo.it;200,00;carlo;carlo
+3;fiscale;a;a;13/03/2021;a;1;a@l.it;11;pino;pino
+4;fiscale;b;b;13/03/2021;a;1;a@l.it;11;ugo;ugo
+5;fiscale;b;c;13/03/2021;a;1;a@l.it;11;michele;michele
+6;ddd;dd;dd;13/03/2021;dd;332;d@d.iy;3;utente;utente
+7;gdhgs;numero7C;numero7N;13/03/2021;Luogo;4352344;assas@jjks.it;442;luca;luca
+8;dgfddgfgfd;Brambilla;Giuseppe;13/03/2021;xxzx;54533;fmf@h.it;4;giuseppe;giuseppe

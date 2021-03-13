@@ -12,18 +12,16 @@ namespace GestioneCondomini
 
         int num = 0;
         public int prog = 0;
+        public int u ;
         public int us;
-        public MyF.ute[] uten = new MyF.ute[1];
+        public int me = 0;
+        public MyF.ute[] uten = new MyF.ute[100];
         public MyF.condomino[] co = new MyF.condomino[100];
         public MyF.riunione[] riu = new MyF.riunione[100];
-
+        public MyF.messaggio[] mes = new MyF.messaggio[1000];
         public Form2()
         {
-
-
             InitializeComponent();
-
-           
 
         }
 
@@ -54,7 +52,7 @@ namespace GestioneCondomini
                 co[num].luogoNascita = i[5].ToString();
                 co[num].telefono = i[6].ToString();
                 co[num].email = i[7].ToString();
-                co[num].millesimi = float.Parse(i[8].ToString());
+                co[num].millesimi = float.Parse(i[8]);
                 co[num].user = i[9].ToString();
                 co[num].password = i[10].ToString();
 
@@ -95,17 +93,47 @@ namespace GestioneCondomini
             sr1.Close();
 
 
+            String line5;
+
+            StreamReader sr5 = new StreamReader("messaggi");
+
+            line5 = sr5.ReadLine();
+
+            while (line5 != null)
+            {
+
+                string[] iy = line5.Split(';');
+                mes[me].id = int.Parse(iy[0].ToString());
+                mes[me].mittente= int.Parse(iy[1].ToString());
+                mes[me].destinatario = int.Parse(iy[2].ToString());
+                mes[me].testo = iy[3];
+                mes[me].Dataora = DateTime.Parse(iy[4].ToString());
+
+                me = me + 1;
+                line5 = sr5.ReadLine();
+            }
+
+            sr5.Close();
+
+
+
+
 
             if (us!=0)
             {
                 btn_gestioneCondomini.Visible = false;
                 btn_GestioneRiunioni.Visible = false;
+                lbl_utente.Text = co[us].cognome.ToString() + " " + co[us].nome.ToString();
+            }
+            else
+            {
+                lbl_utente.Text = co[(us)].cognome.ToString() + " " + co[(us)].nome.ToString();
             }
             
+
             tabControl1.Appearance = TabAppearance.FlatButtons;
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
-            lbl_utente.Text = co[us].cognome.ToString() + " " + co[us].nome.ToString();
 
 
 
@@ -116,46 +144,7 @@ namespace GestioneCondomini
 
         }
 
-        private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if (tabControl2.SelectedIndex == 1)
-            //{
-            //    int x = 1;
-
-            //    ListViewItem Riga;
-            //    listView1.Items.Clear();
-
-            //    while (x < num)
-            //    {
-            //        Riga = new ListViewItem(new string[]
-            //        {
-
-            //        co[x].id_c.ToString(),
-            //        co[x].fiscale,
-            //        co[x].cognome,
-            //        co[x].nome,
-            //        co[x].nascita.ToString("d"),
-            //        co[x].luogoNascita,
-            //        co[x].telefono,
-            //        co[x].email,
-            //        co[x].millesimi.ToString("0.00"),
-            //        co[x].user,
-            //        co[x].password
-
-
-            //        }
-
-            //        );
-
-            //        listView1.Items.Add(Riga);
-
-
-            //        x++;
-            //    }
-            //}
-            //else
-            //    MessageBox.Show("a");
-        }
+        
 
         private void btn_gestioneCondomini_Click(object sender, EventArgs e)
         {
@@ -200,11 +189,38 @@ namespace GestioneCondomini
             tabControl1.SelectTab(3);
             int x = 1;
             lst_condomini.Items.Clear();
+            lst_condomini.Items.Add("0 - Amministratore - Admin");
             while(x<num)
             {
                 string riga = co[x].id_c + " - " + co[x].cognome + " " + co[x].nome;
                 lst_condomini.Items.Add(riga);
                 x = x + 1;
+            }
+
+            int xx = 0;
+            int p = 0;
+
+            ListViewItem Riga;
+            listView4.Items.Clear();
+            
+            while (xx < me)
+            {
+                if(us==mes[xx].destinatario)
+                {
+                    Riga = new ListViewItem(new string[]
+                {
+                    mes[xx].Dataora.ToString("d"),
+                    mes[xx].Dataora.ToString("T"),
+                    $"{co[mes[xx].id-1].cognome} {co[mes[xx].id-1].nome}", 
+                    mes[xx].testo
+                }
+
+                ); ;
+
+                listView4.Items.Add(Riga);
+
+                }
+                xx++;
             }
         }
 
@@ -213,6 +229,7 @@ namespace GestioneCondomini
             string a = lst_condomini.SelectedItem.ToString();
             string[] b = a.Split(" - ");
             int codice=int.Parse(b[0].ToString());
+            txt_destinatario.Text = a;
             listView2.Items.Clear();
             ListViewItem riga;
             riga = new ListViewItem(new string[]
@@ -246,8 +263,6 @@ namespace GestioneCondomini
             riu[prog].odg = testo; 
             
             string tt = $"{riu[prog].ora.ore}:{riu[prog].ora.minuti}";
-            //Pass the filepath and filename to the StreamWriter Constructor
-            //StreamWriter sw = new StreamWriter("riunioni");
             StreamWriter sw = File.AppendText("riunioni");
             //Write a line of text
             string linea = $"{riu[prog].numero};{riu[prog].tipo};{riu[prog].dat.ToString("d")};{tt};{riu[prog].luogo};{riu[prog].oggetto};{riu[prog].odg}";
@@ -275,21 +290,47 @@ namespace GestioneCondomini
             co[num].millesimi = int.Parse(txt_millesimi.Text);
             co[num].user = txt_user.Text;
             co[num].password = txt_password.Text;
+
+            StreamWriter sw2 = File.AppendText("condomini");
+            //Write a line of text
+            string linea2 = $"{co[num].id_c};{co[num].fiscale};{co[num].cognome};{co[num].nome};{co[num].nascita.ToString("d")};{co[num].luogoNascita};{co[num].telefono};{co[num].email};{co[num].millesimi};{co[num].user};{co[num].password}";
+
+            sw2.WriteLine(linea2);
+
+            //Close the file
+            sw2.Close();
+
+           
+            uten[u+1].id = u+1;
+            uten[u+1].nomeutente = co[num].user;
+            uten[u+1].password = co[num].password;
+
+
+            StreamWriter sw3 = File.AppendText("utenti");
+            //Write a line of text
+            string linea3 = $"{uten[u+1].id};{uten[u+1].nomeutente};{uten[u+1].password}";
+
+            sw3.WriteLine(linea3);
+
+            //Close the file
+            sw3.Close();
+
             num = num + 1;
+            u = u + 1;
 
-
-            string ma;
-            ma = txt_email.Text;
-            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            lbl_avviso.Text=($"The email is {ma}");
-            bool isValidEmail = regex.IsMatch(ma);
-
-
-            if (!isValidEmail)
-            {
-                lbl_avviso.Text="Email non valida";
-            }
-            
+            txt_id.Text=num.ToString();
+            txt_fiscale.Clear();
+            txt_cognome.Clear();
+            txt_nome.Clear();
+            dateTimePickerNascita.Value = DateTime.Now.AddYears(-18);
+            Txt_luodoNascita.Clear();
+            txt_telefono.Clear();
+            txt_email.Clear();
+            pictureBox1.Image = null;
+            txt_millesimi.Clear();
+            txt_user.Clear();
+            txt_password.Clear();
+            txt_fiscale.Focus();
         }
 
         private void btn_GestioneRiunioni_Click(object sender, EventArgs e)
@@ -357,24 +398,98 @@ namespace GestioneCondomini
 
                 
 
-            }
+        }
 
         private void txt_email_TextChanged(object sender, EventArgs e)
         {
             string ma;
             ma = txt_email.Text;
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            lbl_avviso.Text = ($"The email is {ma}");
             bool isValidEmail = regex.IsMatch(ma);
 
 
             if (!isValidEmail)
             {
-                lbl_avviso.Text = "Email non valida";
+                
+                pictureBox1.ImageLocation= "rosso.jpg";
             }
             else
-                
-                lbl_avviso.Text = "Email valida";
+            {
+                pictureBox1.ImageLocation = "verde.jpg";
+
+            }
+        }
+
+        private void btn_invia_Click(object sender, EventArgs e)
+        {
+            mes[me].id = me + 1;
+            mes[me].mittente = us;
+            string stringa = txt_destinatario.Text;
+            string[] des = stringa.Split(" - ");
+            mes[me].destinatario=int.Parse(des[0]);
+
+            string[] lineaTesto = richTextBox3.Lines;
+            string testo = default;
+            foreach (string line in lineaTesto)
+            {
+                testo += line + "*";
+            }
+            mes[me].testo = testo;
+            mes[me].Dataora = DateTime.Now;
+
+       
+            StreamWriter sw4 = File.AppendText("messaggi");
+            //Write a line of text
+            string linea4 = $"{mes[me].id};{mes[me].mittente};{mes[me].destinatario};{mes[me].testo};{mes[me].Dataora}";
+
+            sw4.WriteLine(linea4);
+
+            //Close the file
+            sw4.Close();
+
+            me = me + 1;
+            txt_destinatario.Clear();
+            richTextBox3.Clear();
+        }
+
+        private void listView4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView4.SelectedItems.Count > 0)
+            {
+                string Rodg = default;
+                ListView.SelectedListViewItemCollection r =
+                this.listView4.SelectedItems;
+
+
+                foreach (ListViewItem item in r)
+                {
+                    Rodg += item.SubItems[3].Text;
+                }
+
+                string[] txt = Rodg.Split("*");
+
+                int xx = 0;
+                richTextBox4.Clear();
+                while (xx < Rodg.Split("*").Length)
+                {
+                    richTextBox4.AppendText(txt[xx] + "\n");
+                    xx = xx + 1;
+                }
+
+            }
+        }
+
+        private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView4_ItemMouseHover(object sender, ListViewItemMouseHoverEventArgs e)
+        {
+
+
+            //toolTip1.SetToolTip(listView4, "ciao");
+            toolTip1.Show("djjdssdjnnd",listView4);
         }
     }
     }

@@ -59,6 +59,7 @@ namespace GestioneCondomini
                     this.Hide();
                     var form2 = new Form2();
                     form2.us = utent[y].id;
+                    form2.u = x;
                     form2.uten[0] = utent[y];
                     form2.Closed += (s, args) => this.Close();
 

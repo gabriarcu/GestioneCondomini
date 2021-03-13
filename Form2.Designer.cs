@@ -29,8 +29,8 @@ namespace GestioneCondomini
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_chiudi = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@ namespace GestioneCondomini
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.lbl_avviso = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dateTimePickerNascita = new System.Windows.Forms.DateTimePicker();
             this.btn_salvaCondomini = new System.Windows.Forms.Button();
             this.txt_password = new System.Windows.Forms.TextBox();
@@ -93,7 +93,6 @@ namespace GestioneCondomini
             this.cbo_tipo = new System.Windows.Forms.ComboBox();
             this.dateTimePickerRiunione = new System.Windows.Forms.DateTimePicker();
             this.txt_luofoRiunione = new System.Windows.Forms.TextBox();
-            this.txt_odg = new System.Windows.Forms.TextBox();
             this.txt_oggetto = new System.Windows.Forms.TextBox();
             this.txt_progressivo = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -103,6 +102,18 @@ namespace GestioneCondomini
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.listView4 = new System.Windows.Forms.ListView();
+            this.columnHeader20 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader23 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader24 = new System.Windows.Forms.ColumnHeader();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_invia = new System.Windows.Forms.Button();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.txt_destinatario = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader12 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader13 = new System.Windows.Forms.ColumnHeader();
@@ -117,6 +128,7 @@ namespace GestioneCondomini
             this.columnHeader17 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader18 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader19 = new System.Windows.Forms.ColumnHeader();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -125,33 +137,26 @@ namespace GestioneCondomini
             this.tabPage2.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinuti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOre)).BeginInit();
             this.tabPage4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MintCream;
-            this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1570, 83);
             this.panel2.TabIndex = 0;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(1265, 10);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(80, 27);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "label23";
             // 
             // label1
             // 
@@ -337,7 +342,7 @@ namespace GestioneCondomini
             // 
             // tabPage6
             // 
-            this.tabPage6.Controls.Add(this.lbl_avviso);
+            this.tabPage6.Controls.Add(this.pictureBox1);
             this.tabPage6.Controls.Add(this.dateTimePickerNascita);
             this.tabPage6.Controls.Add(this.btn_salvaCondomini);
             this.tabPage6.Controls.Add(this.txt_password);
@@ -369,14 +374,15 @@ namespace GestioneCondomini
             this.tabPage6.Text = "Inserimento";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // lbl_avviso
+            // pictureBox1
             // 
-            this.lbl_avviso.AutoSize = true;
-            this.lbl_avviso.ForeColor = System.Drawing.Color.Red;
-            this.lbl_avviso.Location = new System.Drawing.Point(857, 112);
-            this.lbl_avviso.Name = "lbl_avviso";
-            this.lbl_avviso.Size = new System.Drawing.Size(0, 27);
-            this.lbl_avviso.TabIndex = 24;
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.Location = new System.Drawing.Point(842, 103);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
             // 
             // dateTimePickerNascita
             // 
@@ -674,7 +680,6 @@ namespace GestioneCondomini
             this.tabPage3.Controls.Add(this.cbo_tipo);
             this.tabPage3.Controls.Add(this.dateTimePickerRiunione);
             this.tabPage3.Controls.Add(this.txt_luofoRiunione);
-            this.tabPage3.Controls.Add(this.txt_odg);
             this.tabPage3.Controls.Add(this.txt_oggetto);
             this.tabPage3.Controls.Add(this.txt_progressivo);
             this.tabPage3.Controls.Add(this.label14);
@@ -693,9 +698,9 @@ namespace GestioneCondomini
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(1070, 38);
+            this.richTextBox1.Location = new System.Drawing.Point(718, 98);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(313, 271);
+            this.richTextBox1.Size = new System.Drawing.Size(413, 356);
             this.richTextBox1.TabIndex = 42;
             this.richTextBox1.Text = "";
             // 
@@ -706,7 +711,7 @@ namespace GestioneCondomini
             this.btn_salvaRiunioni.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.btn_salvaRiunioni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salvaRiunioni.ForeColor = System.Drawing.Color.White;
-            this.btn_salvaRiunioni.Location = new System.Drawing.Point(1103, 352);
+            this.btn_salvaRiunioni.Location = new System.Drawing.Point(1215, 406);
             this.btn_salvaRiunioni.Name = "btn_salvaRiunioni";
             this.btn_salvaRiunioni.Size = new System.Drawing.Size(120, 48);
             this.btn_salvaRiunioni.TabIndex = 41;
@@ -717,7 +722,7 @@ namespace GestioneCondomini
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(283, 250);
+            this.label21.Location = new System.Drawing.Point(283, 269);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(20, 27);
             this.label21.TabIndex = 40;
@@ -725,7 +730,7 @@ namespace GestioneCondomini
             // 
             // numericUpDownMinuti
             // 
-            this.numericUpDownMinuti.Location = new System.Drawing.Point(309, 250);
+            this.numericUpDownMinuti.Location = new System.Drawing.Point(309, 269);
             this.numericUpDownMinuti.Maximum = new decimal(new int[] {
             59,
             0,
@@ -737,7 +742,7 @@ namespace GestioneCondomini
             // 
             // numericUpDownOre
             // 
-            this.numericUpDownOre.Location = new System.Drawing.Point(219, 248);
+            this.numericUpDownOre.Location = new System.Drawing.Point(219, 267);
             this.numericUpDownOre.Maximum = new decimal(new int[] {
             24,
             0,
@@ -760,7 +765,7 @@ namespace GestioneCondomini
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(165, 250);
+            this.label20.Location = new System.Drawing.Point(165, 269);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(46, 27);
             this.label20.TabIndex = 37;
@@ -773,7 +778,7 @@ namespace GestioneCondomini
             this.cbo_tipo.Items.AddRange(new object[] {
             "Ordinaria",
             "Straordinaria"});
-            this.cbo_tipo.Location = new System.Drawing.Point(219, 129);
+            this.cbo_tipo.Location = new System.Drawing.Point(217, 130);
             this.cbo_tipo.Name = "cbo_tipo";
             this.cbo_tipo.Size = new System.Drawing.Size(182, 35);
             this.cbo_tipo.TabIndex = 36;
@@ -781,31 +786,23 @@ namespace GestioneCondomini
             // dateTimePickerRiunione
             // 
             this.dateTimePickerRiunione.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerRiunione.Location = new System.Drawing.Point(217, 190);
+            this.dateTimePickerRiunione.Location = new System.Drawing.Point(217, 200);
             this.dateTimePickerRiunione.Name = "dateTimePickerRiunione";
             this.dateTimePickerRiunione.Size = new System.Drawing.Size(185, 32);
             this.dateTimePickerRiunione.TabIndex = 35;
             // 
             // txt_luofoRiunione
             // 
-            this.txt_luofoRiunione.Location = new System.Drawing.Point(217, 306);
+            this.txt_luofoRiunione.Location = new System.Drawing.Point(219, 339);
             this.txt_luofoRiunione.Name = "txt_luofoRiunione";
-            this.txt_luofoRiunione.Size = new System.Drawing.Size(185, 32);
+            this.txt_luofoRiunione.Size = new System.Drawing.Size(404, 32);
             this.txt_luofoRiunione.TabIndex = 34;
-            // 
-            // txt_odg
-            // 
-            this.txt_odg.Location = new System.Drawing.Point(527, 115);
-            this.txt_odg.Multiline = true;
-            this.txt_odg.Name = "txt_odg";
-            this.txt_odg.Size = new System.Drawing.Size(497, 285);
-            this.txt_odg.TabIndex = 33;
             // 
             // txt_oggetto
             // 
-            this.txt_oggetto.Location = new System.Drawing.Point(217, 364);
+            this.txt_oggetto.Location = new System.Drawing.Point(219, 422);
             this.txt_oggetto.Name = "txt_oggetto";
-            this.txt_oggetto.Size = new System.Drawing.Size(185, 32);
+            this.txt_oggetto.Size = new System.Drawing.Size(402, 32);
             this.txt_oggetto.TabIndex = 32;
             // 
             // txt_progressivo
@@ -819,7 +816,7 @@ namespace GestioneCondomini
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(144, 309);
+            this.label14.Location = new System.Drawing.Point(146, 342);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(67, 27);
             this.label14.TabIndex = 29;
@@ -828,7 +825,7 @@ namespace GestioneCondomini
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(71, 195);
+            this.label15.Location = new System.Drawing.Point(71, 205);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(140, 27);
             this.label15.TabIndex = 28;
@@ -837,7 +834,7 @@ namespace GestioneCondomini
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(527, 74);
+            this.label16.Location = new System.Drawing.Point(812, 57);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(175, 27);
             this.label16.TabIndex = 27;
@@ -846,7 +843,7 @@ namespace GestioneCondomini
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(125, 367);
+            this.label17.Location = new System.Drawing.Point(127, 425);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(86, 27);
             this.label17.TabIndex = 26;
@@ -855,7 +852,7 @@ namespace GestioneCondomini
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(159, 132);
+            this.label18.Location = new System.Drawing.Point(157, 133);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(52, 27);
             this.label18.TabIndex = 25;
@@ -872,6 +869,8 @@ namespace GestioneCondomini
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.groupBox2);
+            this.tabPage4.Controls.Add(this.groupBox1);
             this.tabPage4.Controls.Add(this.listView2);
             this.tabPage4.Controls.Add(this.lst_condomini);
             this.tabPage4.Location = new System.Drawing.Point(4, 36);
@@ -881,15 +880,131 @@ namespace GestioneCondomini
             this.tabPage4.Text = "Elenco Condomini";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.richTextBox4);
+            this.groupBox2.Controls.Add(this.listView4);
+            this.groupBox2.Location = new System.Drawing.Point(944, 31);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(490, 469);
+            this.groupBox2.TabIndex = 28;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Messaggi ricevuti";
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.Location = new System.Drawing.Point(13, 219);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.Size = new System.Drawing.Size(471, 244);
+            this.richTextBox4.TabIndex = 31;
+            this.richTextBox4.Text = "";
+            // 
+            // listView4
+            // 
+            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader20,
+            this.columnHeader23,
+            this.columnHeader24});
+            this.listView4.FullRowSelect = true;
+            this.listView4.GridLines = true;
+            this.listView4.HideSelection = false;
+            this.listView4.Location = new System.Drawing.Point(13, 31);
+            this.listView4.Name = "listView4";
+            this.listView4.ShowItemToolTips = true;
+            this.listView4.Size = new System.Drawing.Size(471, 182);
+            this.listView4.TabIndex = 0;
+            this.listView4.UseCompatibleStateImageBehavior = false;
+            this.listView4.View = System.Windows.Forms.View.Details;
+            this.listView4.ItemMouseHover += new System.Windows.Forms.ListViewItemMouseHoverEventHandler(this.listView4_ItemMouseHover);
+            this.listView4.SelectedIndexChanged += new System.EventHandler(this.listView4_SelectedIndexChanged);
+            // 
+            // columnHeader20
+            // 
+            this.columnHeader20.Text = "Data";
+            this.columnHeader20.Width = 120;
+            // 
+            // columnHeader23
+            // 
+            this.columnHeader23.Text = "Ora";
+            this.columnHeader23.Width = 100;
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.Text = "Mittente";
+            this.columnHeader24.Width = 200;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btn_invia);
+            this.groupBox1.Controls.Add(this.richTextBox3);
+            this.groupBox1.Controls.Add(this.txt_destinatario);
+            this.groupBox1.Controls.Add(this.label25);
+            this.groupBox1.Controls.Add(this.label23);
+            this.groupBox1.Location = new System.Drawing.Point(368, 104);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(570, 390);
+            this.groupBox1.TabIndex = 27;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Invia messaggio";
+            // 
+            // btn_invia
+            // 
+            this.btn_invia.BackColor = System.Drawing.Color.Teal;
+            this.btn_invia.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_invia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
+            this.btn_invia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_invia.ForeColor = System.Drawing.Color.White;
+            this.btn_invia.Location = new System.Drawing.Point(419, 327);
+            this.btn_invia.Name = "btn_invia";
+            this.btn_invia.Size = new System.Drawing.Size(120, 48);
+            this.btn_invia.TabIndex = 31;
+            this.btn_invia.Text = "Invia";
+            this.btn_invia.UseVisualStyleBackColor = false;
+            this.btn_invia.Click += new System.EventHandler(this.btn_invia_Click);
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Location = new System.Drawing.Point(139, 103);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(400, 208);
+            this.richTextBox3.TabIndex = 30;
+            this.richTextBox3.Text = "";
+            // 
+            // txt_destinatario
+            // 
+            this.txt_destinatario.Location = new System.Drawing.Point(138, 49);
+            this.txt_destinatario.Name = "txt_destinatario";
+            this.txt_destinatario.ReadOnly = true;
+            this.txt_destinatario.Size = new System.Drawing.Size(402, 32);
+            this.txt_destinatario.TabIndex = 29;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(72, 91);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(60, 27);
+            this.label25.TabIndex = 28;
+            this.label25.Text = "Testo";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 52);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(126, 27);
+            this.label23.TabIndex = 27;
+            this.label23.Text = "Destinatario";
+            // 
             // listView2
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader12,
             this.columnHeader13});
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(321, 31);
+            this.listView2.Location = new System.Drawing.Point(366, 31);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(461, 113);
+            this.listView2.Size = new System.Drawing.Size(572, 67);
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -902,7 +1017,7 @@ namespace GestioneCondomini
             // columnHeader13
             // 
             this.columnHeader13.Text = "Email";
-            this.columnHeader13.Width = 300;
+            this.columnHeader13.Width = 400;
             // 
             // lst_condomini
             // 
@@ -910,7 +1025,7 @@ namespace GestioneCondomini
             this.lst_condomini.ItemHeight = 27;
             this.lst_condomini.Location = new System.Drawing.Point(16, 31);
             this.lst_condomini.Name = "lst_condomini";
-            this.lst_condomini.Size = new System.Drawing.Size(244, 436);
+            this.lst_condomini.Size = new System.Drawing.Size(344, 463);
             this.lst_condomini.TabIndex = 0;
             this.lst_condomini.SelectedIndexChanged += new System.EventHandler(this.lst_condomini_SelectedIndexChanged);
             // 
@@ -1017,12 +1132,16 @@ namespace GestioneCondomini
             this.tabControl2.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinuti)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOre)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
@@ -1046,34 +1165,9 @@ namespace GestioneCondomini
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btn_salvaCondomini;
-        private System.Windows.Forms.TextBox txt_password;
-        private System.Windows.Forms.TextBox txt_user;
-        private System.Windows.Forms.TextBox txt_millesimi;
-        private System.Windows.Forms.TextBox txt_email;
-        private System.Windows.Forms.TextBox txt_telefono;
-        private System.Windows.Forms.TextBox Txt_luodoNascita;
-        private System.Windows.Forms.TextBox txt_nome;
-        private System.Windows.Forms.TextBox txt_cognome;
-        private System.Windows.Forms.TextBox txt_fiscale;
-        private System.Windows.Forms.TextBox txt_id;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNascita;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -1086,10 +1180,6 @@ namespace GestioneCondomini
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ListBox lst_condomini;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.Button btn_salvaRiunioni;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.NumericUpDown numericUpDownMinuti;
@@ -1098,7 +1188,6 @@ namespace GestioneCondomini
         private System.Windows.Forms.ComboBox cbo_tipo;
         private System.Windows.Forms.DateTimePicker dateTimePickerRiunione;
         private System.Windows.Forms.TextBox txt_luofoRiunione;
-        private System.Windows.Forms.TextBox txt_odg;
         private System.Windows.Forms.TextBox txt_oggetto;
         private System.Windows.Forms.TextBox txt_progressivo;
         private System.Windows.Forms.Label label14;
@@ -1107,7 +1196,6 @@ namespace GestioneCondomini
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label lbl_avviso;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ListView listView3;
         private System.Windows.Forms.ColumnHeader columnHeader14;
@@ -1116,8 +1204,50 @@ namespace GestioneCondomini
         private System.Windows.Forms.ColumnHeader columnHeader17;
         private System.Windows.Forms.ColumnHeader columnHeader18;
         private System.Windows.Forms.ColumnHeader columnHeader19;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNascita;
+        private System.Windows.Forms.Button btn_salvaCondomini;
+        private System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.TextBox txt_user;
+        private System.Windows.Forms.TextBox txt_millesimi;
+        private System.Windows.Forms.TextBox txt_email;
+        private System.Windows.Forms.TextBox txt_telefono;
+        private System.Windows.Forms.TextBox Txt_luodoNascita;
+        private System.Windows.Forms.TextBox txt_nome;
+        private System.Windows.Forms.TextBox txt_cognome;
+        private System.Windows.Forms.TextBox txt_fiscale;
+        private System.Windows.Forms.TextBox txt_id;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btn_invia;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.TextBox txt_destinatario;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ListBox lst_condomini;
+        private System.Windows.Forms.ColumnHeader columnHeader23;
+        private System.Windows.Forms.ColumnHeader columnHeader24;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

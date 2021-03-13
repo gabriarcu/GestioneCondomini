@@ -41,5 +41,14 @@ namespace GestioneCondomini
             public decimal minuti;
         }
 
+        public struct messaggio
+        {
+            public int id;
+            public int mittente;
+            public int destinatario;
+            public string testo;
+            public DateTime Dataora;
+        }
+
     }
 }
