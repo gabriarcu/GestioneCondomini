@@ -188,6 +188,9 @@ namespace GestioneCondomini
         {
             tabControl1.SelectTab(3);
             int x = 1;
+            
+            
+            
             lst_condomini.Items.Clear();
             lst_condomini.Items.Add("0 - Amministratore - Admin");
             while(x<num)
@@ -196,10 +199,10 @@ namespace GestioneCondomini
                 lst_condomini.Items.Add(riga);
                 x = x + 1;
             }
-
-            int xx = 0;
+            
             int p = 0;
-
+            int xx = 0;
+            
             ListViewItem Riga;
             listView4.Items.Clear();
             
@@ -211,16 +214,68 @@ namespace GestioneCondomini
                 {
                     mes[xx].Dataora.ToString("d"),
                     mes[xx].Dataora.ToString("T"),
-                    $"{co[mes[xx].id-1].cognome} {co[mes[xx].id-1].nome}", 
+                    $"{co[mes[xx].mittente].cognome} {co[mes[xx].mittente].nome}", 
                     mes[xx].testo
                 }
 
                 ); ;
 
+                    
+
+                    string[] txt = mes[xx].testo.Split("*");
+                    
+                    int xx2 = 0;
+                    string tip = default;
+                    while (xx2 < mes[xx].testo.Split("*").Length)
+                    {
+                        tip += txt[xx2] + "\n";
+                        xx2 = xx2 + 1;
+                    }
+                    Riga.ToolTipText = tip;
                 listView4.Items.Add(Riga);
+                
 
                 }
                 xx++;
+            }
+
+            int xxa = 0;
+            ListViewItem Riga2;
+            listView5.Items.Clear();
+
+            while (xxa < me)
+            {
+                if (us == mes[xxa].mittente)
+                {
+                    Riga2 = new ListViewItem(new string[]
+                {
+                    mes[xxa].Dataora.ToString("d"),
+                    mes[xxa].Dataora.ToString("T"),
+                    $"{co[mes[xxa].destinatario].cognome} {co[mes[xxa].destinatario].nome}",
+                    mes[xxa].testo
+                }
+
+                ); ;
+
+
+
+                    string[] txt2 = mes[xxa].testo.Split("*");
+
+
+                    int xx3 = 0;
+
+                    string tip2 = default;
+                    while (xx3 < mes[xxa].testo.Split("*").Length)
+                    {
+                        tip2 += txt2[xx3] + "\n";
+                        xx3 = xx3 + 1;
+                    }
+                    Riga2.ToolTipText = tip2;
+                    listView5.Items.Add(Riga2);
+
+
+                }
+                xxa++;
             }
         }
 
@@ -486,11 +541,9 @@ namespace GestioneCondomini
 
         private void listView4_ItemMouseHover(object sender, ListViewItemMouseHoverEventArgs e)
         {
-
-
-            //toolTip1.SetToolTip(listView4, "ciao");
-            toolTip1.Show("djjdssdjnnd",listView4);
+        
         }
+            
     }
-    }
+}
 

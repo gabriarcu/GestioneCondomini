@@ -29,7 +29,6 @@ namespace GestioneCondomini
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -102,8 +101,13 @@ namespace GestioneCondomini
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.listView5 = new System.Windows.Forms.ListView();
+            this.columnHeader21 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader22 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader25 = new System.Windows.Forms.ColumnHeader();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listView4 = new System.Windows.Forms.ListView();
             this.columnHeader20 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader23 = new System.Windows.Forms.ColumnHeader();
@@ -128,7 +132,6 @@ namespace GestioneCondomini
             this.columnHeader17 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader18 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader19 = new System.Windows.Forms.ColumnHeader();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -143,6 +146,7 @@ namespace GestioneCondomini
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinuti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOre)).BeginInit();
             this.tabPage4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -869,6 +873,8 @@ namespace GestioneCondomini
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.groupBox3);
+            this.tabPage4.Controls.Add(this.richTextBox4);
             this.tabPage4.Controls.Add(this.groupBox2);
             this.tabPage4.Controls.Add(this.groupBox1);
             this.tabPage4.Controls.Add(this.listView2);
@@ -880,24 +886,65 @@ namespace GestioneCondomini
             this.tabPage4.Text = "Elenco Condomini";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // groupBox3
             // 
-            this.groupBox2.Controls.Add(this.richTextBox4);
-            this.groupBox2.Controls.Add(this.listView4);
-            this.groupBox2.Location = new System.Drawing.Point(944, 31);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(490, 469);
-            this.groupBox2.TabIndex = 28;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Messaggi ricevuti";
+            this.groupBox3.Controls.Add(this.listView5);
+            this.groupBox3.Location = new System.Drawing.Point(944, 257);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(490, 237);
+            this.groupBox3.TabIndex = 32;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Messaggi inviati";
+            // 
+            // listView5
+            // 
+            this.listView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader21,
+            this.columnHeader22,
+            this.columnHeader25});
+            this.listView5.FullRowSelect = true;
+            this.listView5.GridLines = true;
+            this.listView5.HideSelection = false;
+            this.listView5.Location = new System.Drawing.Point(13, 31);
+            this.listView5.Name = "listView5";
+            this.listView5.ShowItemToolTips = true;
+            this.listView5.Size = new System.Drawing.Size(471, 191);
+            this.listView5.TabIndex = 0;
+            this.listView5.UseCompatibleStateImageBehavior = false;
+            this.listView5.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader21
+            // 
+            this.columnHeader21.Text = "Data";
+            this.columnHeader21.Width = 120;
+            // 
+            // columnHeader22
+            // 
+            this.columnHeader22.Text = "Ora";
+            this.columnHeader22.Width = 100;
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "Destinatario";
+            this.columnHeader25.Width = 235;
             // 
             // richTextBox4
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(13, 219);
+            this.richTextBox4.Location = new System.Drawing.Point(77, 207);
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.Size = new System.Drawing.Size(471, 244);
             this.richTextBox4.TabIndex = 31;
             this.richTextBox4.Text = "";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.listView4);
+            this.groupBox2.Location = new System.Drawing.Point(944, 31);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(490, 220);
+            this.groupBox2.TabIndex = 28;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Messaggi ricevuti";
             // 
             // listView4
             // 
@@ -911,7 +958,7 @@ namespace GestioneCondomini
             this.listView4.Location = new System.Drawing.Point(13, 31);
             this.listView4.Name = "listView4";
             this.listView4.ShowItemToolTips = true;
-            this.listView4.Size = new System.Drawing.Size(471, 182);
+            this.listView4.Size = new System.Drawing.Size(471, 189);
             this.listView4.TabIndex = 0;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;
@@ -931,7 +978,7 @@ namespace GestioneCondomini
             // columnHeader24
             // 
             this.columnHeader24.Text = "Mittente";
-            this.columnHeader24.Width = 200;
+            this.columnHeader24.Width = 240;
             // 
             // groupBox1
             // 
@@ -1139,6 +1186,7 @@ namespace GestioneCondomini
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinuti)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOre)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1248,6 +1296,10 @@ namespace GestioneCondomini
         private System.Windows.Forms.ListBox lst_condomini;
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.ColumnHeader columnHeader24;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ListView listView5;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.ColumnHeader columnHeader22;
+        private System.Windows.Forms.ColumnHeader columnHeader25;
     }
 }
