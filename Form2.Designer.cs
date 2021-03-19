@@ -106,7 +106,6 @@ namespace GestioneCondomini
             this.columnHeader21 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader22 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader25 = new System.Windows.Forms.ColumnHeader();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listView4 = new System.Windows.Forms.ListView();
             this.columnHeader20 = new System.Windows.Forms.ColumnHeader();
@@ -159,7 +158,7 @@ namespace GestioneCondomini
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1570, 83);
+            this.panel2.Size = new System.Drawing.Size(1582, 83);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -271,7 +270,7 @@ namespace GestioneCondomini
             this.panel1.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1570, 626);
+            this.panel1.Size = new System.Drawing.Size(1582, 626);
             this.panel1.TabIndex = 1;
             // 
             // tabControl1
@@ -285,7 +284,7 @@ namespace GestioneCondomini
             this.tabControl1.Location = new System.Drawing.Point(120, 83);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1450, 543);
+            this.tabControl1.Size = new System.Drawing.Size(1462, 543);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -295,7 +294,7 @@ namespace GestioneCondomini
             this.tabPage1.Location = new System.Drawing.Point(4, 36);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1442, 503);
+            this.tabPage1.Size = new System.Drawing.Size(1454, 503);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Benvenuto";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -327,7 +326,7 @@ namespace GestioneCondomini
             this.tabPage2.Location = new System.Drawing.Point(4, 36);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1442, 503);
+            this.tabPage2.Size = new System.Drawing.Size(1454, 503);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Gestione condomini";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -340,7 +339,7 @@ namespace GestioneCondomini
             this.tabControl2.Location = new System.Drawing.Point(3, 3);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1436, 497);
+            this.tabControl2.Size = new System.Drawing.Size(1448, 497);
             this.tabControl2.TabIndex = 0;
             this.tabControl2.SelectedIndexChanged += new System.EventHandler(this.tabControl2_SelectedIndexChanged);
             // 
@@ -373,7 +372,7 @@ namespace GestioneCondomini
             this.tabPage6.Location = new System.Drawing.Point(4, 36);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1428, 457);
+            this.tabPage6.Size = new System.Drawing.Size(1440, 457);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "Inserimento";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -588,7 +587,7 @@ namespace GestioneCondomini
             this.tabPage7.Location = new System.Drawing.Point(4, 36);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1428, 457);
+            this.tabPage7.Size = new System.Drawing.Size(1440, 457);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Visualizza";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -613,7 +612,7 @@ namespace GestioneCondomini
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1422, 451);
+            this.listView1.Size = new System.Drawing.Size(1434, 451);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -695,7 +694,7 @@ namespace GestioneCondomini
             this.tabPage3.Location = new System.Drawing.Point(4, 36);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1442, 503);
+            this.tabPage3.Size = new System.Drawing.Size(1454, 503);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Gestione Riunioni";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -874,14 +873,13 @@ namespace GestioneCondomini
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.groupBox3);
-            this.tabPage4.Controls.Add(this.richTextBox4);
             this.tabPage4.Controls.Add(this.groupBox2);
             this.tabPage4.Controls.Add(this.groupBox1);
             this.tabPage4.Controls.Add(this.listView2);
             this.tabPage4.Controls.Add(this.lst_condomini);
             this.tabPage4.Location = new System.Drawing.Point(4, 36);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1442, 503);
+            this.tabPage4.Size = new System.Drawing.Size(1454, 503);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Elenco Condomini";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -891,7 +889,7 @@ namespace GestioneCondomini
             this.groupBox3.Controls.Add(this.listView5);
             this.groupBox3.Location = new System.Drawing.Point(944, 257);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(490, 237);
+            this.groupBox3.Size = new System.Drawing.Size(507, 237);
             this.groupBox3.TabIndex = 32;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Messaggi inviati";
@@ -908,7 +906,7 @@ namespace GestioneCondomini
             this.listView5.Location = new System.Drawing.Point(13, 31);
             this.listView5.Name = "listView5";
             this.listView5.ShowItemToolTips = true;
-            this.listView5.Size = new System.Drawing.Size(471, 191);
+            this.listView5.Size = new System.Drawing.Size(488, 191);
             this.listView5.TabIndex = 0;
             this.listView5.UseCompatibleStateImageBehavior = false;
             this.listView5.View = System.Windows.Forms.View.Details;
@@ -928,20 +926,12 @@ namespace GestioneCondomini
             this.columnHeader25.Text = "Destinatario";
             this.columnHeader25.Width = 235;
             // 
-            // richTextBox4
-            // 
-            this.richTextBox4.Location = new System.Drawing.Point(77, 207);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(471, 244);
-            this.richTextBox4.TabIndex = 31;
-            this.richTextBox4.Text = "";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listView4);
             this.groupBox2.Location = new System.Drawing.Point(944, 31);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(490, 220);
+            this.groupBox2.Size = new System.Drawing.Size(501, 220);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Messaggi ricevuti";
@@ -958,7 +948,7 @@ namespace GestioneCondomini
             this.listView4.Location = new System.Drawing.Point(13, 31);
             this.listView4.Name = "listView4";
             this.listView4.ShowItemToolTips = true;
-            this.listView4.Size = new System.Drawing.Size(471, 189);
+            this.listView4.Size = new System.Drawing.Size(488, 189);
             this.listView4.TabIndex = 0;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;
@@ -1083,7 +1073,7 @@ namespace GestioneCondomini
             this.tabPage5.Controls.Add(this.listView3);
             this.tabPage5.Location = new System.Drawing.Point(4, 36);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1442, 503);
+            this.tabPage5.Size = new System.Drawing.Size(1454, 503);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Elenco Riunioni";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1162,7 +1152,7 @@ namespace GestioneCondomini
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1570, 626);
+            this.ClientSize = new System.Drawing.Size(1582, 626);
             this.Controls.Add(this.panel1);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1281,7 +1271,6 @@ namespace GestioneCondomini
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox richTextBox4;
         private System.Windows.Forms.ListView listView4;
         private System.Windows.Forms.ColumnHeader columnHeader20;
         private System.Windows.Forms.GroupBox groupBox1;

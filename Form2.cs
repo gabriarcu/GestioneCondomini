@@ -509,29 +509,29 @@ namespace GestioneCondomini
 
         private void listView4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listView4.SelectedItems.Count > 0)
-            {
-                string Rodg = default;
-                ListView.SelectedListViewItemCollection r =
-                this.listView4.SelectedItems;
+            //if (listView4.SelectedItems.Count > 0)
+            //{
+            //    string Rodg = default;
+            //    ListView.SelectedListViewItemCollection r =
+            //    this.listView4.SelectedItems;
 
 
-                foreach (ListViewItem item in r)
-                {
-                    Rodg += item.SubItems[3].Text;
-                }
+            //    foreach (ListViewItem item in r)
+            //    {
+            //        Rodg += item.SubItems[3].Text;
+            //    }
 
-                string[] txt = Rodg.Split("*");
+            //    string[] txt = Rodg.Split("*");
 
-                int xx = 0;
-                richTextBox4.Clear();
-                while (xx < Rodg.Split("*").Length)
-                {
-                    richTextBox4.AppendText(txt[xx] + "\n");
-                    xx = xx + 1;
-                }
+            //    int xx = 0;
+            //    richTextBox4.Clear();
+            //    while (xx < Rodg.Split("*").Length)
+            //    {
+            //        richTextBox4.AppendText(txt[xx] + "\n");
+            //        xx = xx + 1;
+            //    }
 
-            }
+            //}
         }
 
         private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
